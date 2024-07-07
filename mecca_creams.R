@@ -53,6 +53,7 @@ get_text <- function(link){
   # link <- "https://www.mecca.com/en-au/dr-jart/cicapair-intensive-soothing-repair-serum-I-069992/?cgpath=skincare-serums"
   # link <- "https://www.mecca.com/en-au/kate-somerville/hydrakate-recharging-water-cream-I-057784/?cgpath=skincare-moisturiser"
   # link <- "https://www.mecca.com/en-au/alpha-h/midnight-reboot-serum-with-14-glycolic-acid-V-054165/?cgpath=skincare-serums"
+  # link <- "https://www.mecca.com/en-au/ere-perez/wild-tomato-riche-creme-I-053812/?cgpath=skincare-moisturiser"
   link <- read_html(link)
   
   
@@ -153,5 +154,5 @@ abc <- h %>%
   arrange(perml) %>% 
   mutate(per50ml = perml * 50)
 
-# write.csv(abc, paste0("mecca creams ",Sys.Date(), ".csv"))
+write.csv(abc, paste0(here::here(),"/results/mecca creams ",Sys.Date(), ".csv"), row.names = F)
 

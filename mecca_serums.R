@@ -141,7 +141,7 @@ abc <- h %>%
   arrange(perml) %>% 
   mutate(per30ml = perml * 30)
 
-write.csv(abc, paste0("mecca serums ",Sys.Date(), ".csv"))
+write.csv(abc, paste0(here::here(),"/results/mecca serums ",Sys.Date(), ".csv"), row.names = F)
 # name <- h %>% head(2) %>% tail(1) %>% pull(name)
 # str_extract("Cicapair Intensive Soothing Repair Serum 30ml", "[ml]")
 # sub("ml", "",  "Cicapair Intensive Soothing Repair Serum 30ml")
